@@ -11,8 +11,6 @@ const AddUser = props => {
 
   const addUserHandler = event => {
     event.preventDefault();
-    console.log(username);
-    console.log(age);
 
     if (username.trim() === "") {
       alert("Invalid username");
@@ -22,6 +20,8 @@ const AddUser = props => {
       alert("Invalid age");
       return;
     }
+
+    props.onAddUser({ name: username, age });
 
     setUsername("");
     setAge("");
