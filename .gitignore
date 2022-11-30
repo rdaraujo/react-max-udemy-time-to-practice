@@ -1,3 +1,6 @@
+# Potential sensitive information
+.env*
+
 # Logs
 logs
 *.log
